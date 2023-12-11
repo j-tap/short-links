@@ -27,7 +27,7 @@ else {
     server = http.createServer(app)
 }
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log(`Server ${packageJson.name} running on port ${PORT} (${NODE_ENV === 'production' ? 'https' : 'http'})`)
 })
 
