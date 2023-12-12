@@ -14,6 +14,10 @@ export function defineLink (db) {
             type: DataTypes.STRING,
             unique: true,
         },
+        count_views: {
+            type: DataTypes.BIGINT,
+            defaultValue: 0,
+        },
     }, {
         tableName: 'links',
     })

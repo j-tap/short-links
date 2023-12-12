@@ -18,7 +18,12 @@ const Link = defineLink(db)
 
 db.sync().then(() => console.log('DB is ready'))
 
+function migrate () {
+    Link.sync({ alter: true })
+}
+
 export {
     db,
     Link,
+    migrate,
 }
