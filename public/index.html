@@ -32,7 +32,9 @@
             </div>
             <form id="form" class="form" action="/short" method="post">
                 <div class="form__row">
-                    <input id="field-link" class="form__field field" type="text" name="link" placeholder="Enter URL">
+                    <div class="form__field field">
+                        <input id="field-link" type="text" name="link" placeholder="Enter URL">
+                    </div>
                     <button id="form-btn-submit" class="form__btn btn" type="submit">Make short</button>
                     <button id="form-btn-copy" class="form__btn btn" type="button" style="display:none">Copy</button>
                 </div>
