@@ -1,6 +1,6 @@
 {
   "name": "short-links",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.5.0",
   "description": "",
   "version": "1.0.0",
   "main": "index.mjs",
