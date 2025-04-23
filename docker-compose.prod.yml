@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
       args:
         MODE: production
-    command: node --loader ts-node/esm src/index.mts
+    command: node src/index.mjs
     networks:
       - traefik
     volumes:

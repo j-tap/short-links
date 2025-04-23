@@ -13,5 +13,6 @@ services:
       - .:/app
       - /app/node_modules
       - ./database.sqlite:/app/database.sqlite
-    command: node --watch --loader ts-node/esm src/index.mts
+    command: node --watch src/index.mjs
+
 
