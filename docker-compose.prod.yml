@@ -9,7 +9,7 @@ services:
       context: ./
       args:
         MODE: production
-    command: node index.mts
+    command: node src/index.mts
     networks:
       - traefik
     volumes:

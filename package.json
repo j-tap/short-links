@@ -3,10 +3,10 @@
   "packageManager": "yarn@4.5.0",
   "description": "",
   "version": "1.0.0",
-  "main": "index.mjs",
+  "main": "src/index.mjs",
   "scripts": {
-    "dev": "nodemon --experimental-modules index.mjs",
-    "start": "node index.mjs"
+    "dev": "nodemon --experimental-modules src/index.mjs",
+    "start": "node src/index.mjs"
   },
   "author": "j-tap",
   "license": "ISC",
@@ -14,7 +14,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
-    "https": "^1.0.0",
     "nodemon": "^3.1.7",
     "sequelize": "^6.37.4",
     "sqlite3": "^5.1.7"

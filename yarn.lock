@@ -1091,13 +1091,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"https@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "https@npm:1.0.0"
-  checksum: e36eb4c38f09264bb273925b2d658c38bb8dda655cdff679b75dc45ccac26b1520fadcf00be677ccc4432a62f44a408b522f66cfc802ce30f4effe75decfd554
-  languageName: node
-  linkType: hard
-
 "humanize-ms@npm:^1.2.1":
   version: 1.2.1
   resolution: "humanize-ms@npm:1.2.1"
@@ -2130,7 +2123,6 @@ __metadata:
     dotenv: "npm:^16.4.5"
     express: "npm:^4.21.1"
     express-rate-limit: "npm:^7.4.1"
-    https: "npm:^1.0.0"
     nodemon: "npm:^3.1.7"
     sequelize: "npm:^6.37.4"
     sqlite3: "npm:^5.1.7"
