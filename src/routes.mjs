@@ -15,7 +15,7 @@ const limiter = rateLimit({
 router.use('/short', limiter)
 
 router.get('/', (req, res) => {
-    res.sendFile(path.resolve('public/index.html'))
+    res.sendFile(new URL('./public/index.html', import.meta.url).pathname)
 })
 
 router.post('/short', async (req, res) => {
