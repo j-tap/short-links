@@ -7,10 +7,10 @@ dev:
 	docker compose --env-file .env -f docker-compose.yml up --build
 
 prod: generate_traefik build
-	docker compose --env-file .env -f docker-compose.yml -f docker-compose.prod.yml -f docker-compose.traefik.yml up -d
+	docker compose --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml up -d
 
 build:
-	docker compose --env-file .env -f docker-compose.yml -f docker-compose.prod.yml -f docker-compose.traefik.yml build
+	docker compose --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml build
 
 clean:
 	docker compose -f docker-compose.dev.yml down || true
