@@ -1,14 +1,11 @@
 import path from 'path'
 import { generateShortCode } from './utils.mjs'
 import { Link } from './db.mjs'
-import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 const { ORIGIN } = process.env
 
 export function show404Page (res) {
-    res.status(404).sendFile(path.join(__dirname, 'public/error404.html'))
+    res.status(404).sendFile(path.resolve('public/error404.html'))
 }
 
 export async function createUniqueLink (link = '') {

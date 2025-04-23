@@ -1,11 +1,8 @@
 import express from 'express'
 import { rateLimit } from 'express-rate-limit'
 import path from 'path'
-import { fileURLToPath } from 'url'
 import { createUniqueLink, getLinkByCode, getShortLinkFromItem, linkViewsInc, show404Page } from './methods.mjs'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 const { LIMIT_SECONDS } = process.env
 const router = express.Router()
 
@@ -18,7 +15,7 @@ const limiter = rateLimit({
 router.use('/short', limiter)
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+    res.sendFile(path.resolve('public/index.html'))
 })
 
 router.post('/short', async (req, res) => {
