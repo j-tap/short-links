@@ -2,6 +2,7 @@ services:
   svr9pro:
     build:
       context: ./src
+      dockerfile: ../Dockerfile
       args:
         MODE: development
     ports:

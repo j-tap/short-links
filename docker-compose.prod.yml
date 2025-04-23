@@ -7,6 +7,7 @@ services:
       NODE_ENV: production
     build:
       context: ./src
+      dockerfile: ../Dockerfile
       args:
         MODE: production
     command: node index.mts
