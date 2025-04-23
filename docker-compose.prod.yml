@@ -1,0 +1,20 @@
+
+services:
+  site:
+    ports: []
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    build:
+      context: ./
+      args:
+        MODE: production
+    command: node index.mts
+    networks:
+      - traefik
+    volumes:
+      - ./database.sqlite:/app/database.sqlite
+
+networks:
+  traefik:
+    external: true

@@ -1,0 +1,12 @@
+services:
+  site:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./database.sqlite:/app/database.sqlite
+    command: node --watch index.mts
