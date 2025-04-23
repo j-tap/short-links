@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use('/public', express.static('public'))
+app.use('/public', express.static(new URL('./public', import.meta.url).pathname))
 
 app.use(routes)
 
