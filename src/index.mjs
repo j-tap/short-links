@@ -1,6 +1,5 @@
 import express from 'express'
 import 'dotenv/config'
-import packageJson from './package.json' assert { type: 'json' }
 import routes from './routes.mjs'
 import { show404Page } from './methods.mjs'
 
@@ -17,6 +16,6 @@ app.use((req, res) => {
     show404Page(res)
 })
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Server "${packageJson.name}" running on port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`Listening at http://localhost:${PORT}`)
 })

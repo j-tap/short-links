@@ -6,7 +6,7 @@ generate_traefik:
 dev:
 	docker compose --env-file .env -f docker-compose.yml up --build
 
-prod: generate_traefik build
+prod: clean generate_traefik build
 	docker compose --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml up -d
 
 build:
