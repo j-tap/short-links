@@ -5,7 +5,7 @@ import { Link } from './db.mjs'
 const { ORIGIN } = process.env
 
 export function show404Page (res) {
-    res.status(404).sendFile(path.resolve('public/error404.html'))
+    res.status(404).sendFile(new URL('./public/error404.html', import.meta.url).pathname)
 }
 
 export async function createUniqueLink (link = '') {

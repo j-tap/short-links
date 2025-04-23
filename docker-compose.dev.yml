@@ -1,6 +1,9 @@
 services:
   svr9pro:
-    build: .
+    build:
+      context: ./src
+      args:
+        MODE: development
     ports:
       - "${PORT}:${PORT}"
     environment:

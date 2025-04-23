@@ -6,14 +6,14 @@ services:
     environment:
       NODE_ENV: production
     build:
-      context: ./
+      context: ./src
       args:
         MODE: production
-    command: node src/index.mts
+    command: node index.mts
     networks:
       - traefik
     volumes:
-      - ./database.sqlite:/app/database.sqlite
+      - ../database.sqlite:/app/database.sqlite
 
 networks:
   traefik:
