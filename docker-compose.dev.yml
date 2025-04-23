@@ -1,8 +1,8 @@
 services:
   svr9pro:
     build:
-      context: ./src
-      dockerfile: ../Dockerfile
+      context: ./
+      dockerfile: Dockerfile
       args:
         MODE: development
     ports:
@@ -13,4 +13,5 @@ services:
       - .:/app
       - /app/node_modules
       - ./database.sqlite:/app/database.sqlite
-    command: node --watch src/index.mts
+    command: node --watch --loader ts-node/esm src/index.mts
+

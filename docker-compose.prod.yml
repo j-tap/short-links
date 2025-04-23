@@ -6,15 +6,15 @@ services:
     environment:
       NODE_ENV: production
     build:
-      context: ./src
-      dockerfile: ../Dockerfile
+      context: ./
+      dockerfile: Dockerfile
       args:
         MODE: production
-    command: node index.mts
+    command: node --loader ts-node/esm src/index.mts
     networks:
       - traefik
     volumes:
-      - ../database.sqlite:/app/database.sqlite
+      - ./database.sqlite:/app/database.sqlite
 
 networks:
   traefik:
