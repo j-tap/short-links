@@ -9,7 +9,7 @@ services:
       - "traefik.http.routers.svr9pro.rule=Host(`${TRAEFIK_DOMAIN}`)"
       - "traefik.http.routers.svr9pro.entrypoints=websecure"
       - "traefik.http.routers.svr9pro.tls.certresolver=myresolver"
-      - "traefik.http.services.svr9pro.loadbalancer.server.port=${PORT_FRONTEND}"
+      - "traefik.http.services.svr9pro.loadbalancer.server.port=${PORT}"
 
       # HTTP redirect
       - "traefik.http.routers.svr9pro-http.rule=Host(`${TRAEFIK_DOMAIN}`)"
