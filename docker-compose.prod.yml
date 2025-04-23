@@ -1,6 +1,6 @@
 
 services:
-  site:
+  svr9pro:
     ports: []
     restart: unless-stopped
     environment:

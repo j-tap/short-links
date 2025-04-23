@@ -1,5 +1,5 @@
 services:
-  site:
+  svr9pro:
     build: .
     ports:
       - "${PORT}:${PORT}"
