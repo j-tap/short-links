@@ -102,10 +102,19 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 .form__field {
     display: inline-flex;
     position: relative;
+
+    @media screen and (max-width: 767px) {
+        width: 100%
+    }
 }
 .form__field input {
     width: 100%;
@@ -126,6 +135,12 @@ body {
 .form__field input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--text-color);
     transition: background-color 9999s ease-in-out 0s;
+}
+
+.form__btn {
+    @media screen and (max-width: 767px) {
+        width: 100%
+    }
 }
 
 .form__field::before {
