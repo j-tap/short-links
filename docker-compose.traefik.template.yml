@@ -14,10 +14,10 @@ services:
       # HTTP redirect
       - "traefik.http.routers.svr9pro-http.rule=Host(`${TRAEFIK_DOMAIN}`)"
       - "traefik.http.routers.svr9pro-http.entrypoints=web"
-      - "traefik.http.routers.svr9pro-http.middlewares=https-redirect"
+      - "traefik.http.routers.svr9pro-http.middlewares=shortlinks-https-redirect"
 
       # Middleware definition
-      - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.shortlinks-https-redirect.redirectscheme.scheme=https"
 
 networks:
   traefik:
