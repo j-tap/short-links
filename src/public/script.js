@@ -57,7 +57,8 @@ async function submit () {
         copy(response.short)
     }
     else {
-        console.error(response.error || 'Unknown error')
+        // Валидация на сервере отклоняет небезопасные ссылки — причину надо показать
+        showNotify(response?.error || 'Unknown error')
     }
 }
 

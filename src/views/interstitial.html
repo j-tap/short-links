@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <title>Check the link before you continue</title>
+    <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+    <section class="app">
+        <div class="app-center">
+            <div class="app-head">
+                <h1 class="app-title">Careful</h1>
+                <p class="app-descr">You are leaving this service. Check the address before you continue.</p>
+            </div>
+            <div class="warn">
+                <p class="warn__label">The link points to:</p>
+                <p class="warn__url">{{URL}}</p>
+                <ul class="warn__reasons">{{REASONS}}</ul>
+                <div class="warn__actions">
+                    <a class="btn" rel="noreferrer noopener nofollow" href="{{URL_ATTR}}">Continue anyway</a>
+                    <a class="btn" href="/">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
