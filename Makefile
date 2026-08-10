@@ -6,7 +6,7 @@ generate_traefik:
 	bash -c "set -a && source .env && envsubst < docker-compose.traefik.template.yml > docker-compose.traefik.yml"
 
 dev:
-	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.yml up --build
+	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.dev.yml up --build
 
 prod: generate_traefik build
 	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml up -d

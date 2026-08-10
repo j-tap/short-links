@@ -46,7 +46,7 @@ function parseUrl (raw) {
 
     if (/^https?:\/\//i.test(value)) return new URL(value)
     // Уже есть какая-то другая схема — она не поддерживается
-    if (/^[a-z][a-z0-9+.\-]*:\/\//i.test(value)) throw new Error(REASON.BAD_SCHEME)
+    if (/^[a-z][a-z0-9+.-]*:\/\//i.test(value)) throw new Error(REASON.BAD_SCHEME)
     if (value.startsWith('//')) throw new Error(REASON.BAD_SCHEME)
 
     return new URL(`https://${value}`)

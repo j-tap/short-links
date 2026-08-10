@@ -1,11 +1,14 @@
-import path from 'path'
+import { fileURLToPath } from 'url'
 import { Sequelize } from 'sequelize'
 import { defineLink } from './models.mjs'
 
+// Путь считается от файла, а не от cwd: иначе в контейнере (WORKDIR /app)
+// база оказывалась в /database.sqlite мимо тома, смонтированного в /app/database.sqlite,
+// и пропадала при каждой пересборке
 const db = new Sequelize({
     dialect: 'sqlite',
     host: 'localhost',
-    storage: path.resolve('../database.sqlite'),
+    storage: fileURLToPath(new URL('../database.sqlite', import.meta.url)),
 })
 
 db.op = Sequelize.Op

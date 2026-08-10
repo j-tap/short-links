@@ -8,4 +8,4 @@ RUN yarn install
 
 EXPOSE 3000
 
-CMD ["node", "src/index.mts"]
+CMD ["node", "src/index.mjs"]
