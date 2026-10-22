@@ -12,7 +12,7 @@ prod: generate_traefik build
 	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml up -d
 
 build:
-	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml build
+	docker compose -p $(PROJECT_NAME) --env-file .env -f docker-compose.prod.yml -f docker-compose.traefik.yml build --pull
 
 clean:
 	docker compose -p $(PROJECT_NAME) -f docker-compose.dev.yml down || true
